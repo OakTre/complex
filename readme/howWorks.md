@@ -52,10 +52,10 @@ npm run build:prod
 * `squoosh` — оптимизирует изображения в папке `build/assets/images`.
 
 ## Документация
-1. [Структура проекта](/structure.md)
-1. [Работа с PUG(JADE)](/pug.md)
-1. [Работа с стилями(SCSS)](/styles.md)
-1. [BEM методолгия](/bem.md)
-1. [Pixel-perfect](/pixel-pefect.md)
-1. [Кроссбраузерность](/crossbrowser.md)
-1. [Работа с GIT](/git.md)
+1. [Структура проекта](./readme/structure.md)
+1. [Работа с PUG(JADE)](./readme/pug.md)
+1. [Работа с стилями(SCSS)](./readme/styles.md)
+1. [BEM методолгия](./readme/bem.md)
+1. [Pixel-perfect](./readme/pixel-pefect.md)
+1. [Кроссбраузерность](./readme/crossbrowser.md)
+1. [Работа с GIT](./readme/git.md)
