@@ -1,0 +1,20 @@
+.header {
+  padding-top: 2rem;
+
+  .site-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  a {
+    display: block;
+    flex-shrink: 0;
+
+    img {
+      max-width: 6rem;
+      height: 3.3rem;
+    }
+  }
+}

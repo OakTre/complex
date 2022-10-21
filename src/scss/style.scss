@@ -1,0 +1,68 @@
+/* stylelint-disable no-eol-whitespace */
+/* stylelint-disable custom-property-empty-line-before */
+/* stylelint-disable no-invalid-position-at-import-rule */
+:root {
+  /* typography  */
+  --main-ff: "Golos", sans-serif;
+  --second-ff: "Golos", sans-serif;
+
+  --font-h1: 600 16rem/1 var(--main-ff);
+  --font-h2: 600 5.6rem/7.2rem var(--main-ff);
+  --font-h3: 600 4rem/5.2rem var(--main-ff);
+  --font-h4: 600 3.2rem/4rem var(--main-ff);
+  --font-h5: 500 2.8rem/3.6rem var(--main-ff);
+  --font-h6: 500 2.4rem/3.2rem var(--main-ff);
+
+  --font-text-20-reg: 400 2rem/2.8rem var(--main-ff);
+  --font-text-20-md: 500 2rem/2.8rem var(--main-ff);
+  --font-text-20-bld: 700 2rem/2.8rem var(--main-ff);
+
+  --font-text-16-reg: 400 1.6rem/2.8rem var(--main-ff);
+  --font-text-16-md: 500 1.6rem/2.8rem var(--main-ff);
+  --font-text-16-bld: 700 1.6rem/2.8rem var(--main-ff);
+
+  --font-text-14-md: 500 1.4rem/2.4rem var(--main-ff);
+  --font-body: var(--font-text-16-reg);
+
+  /* colors */
+  --color-white: #fff;
+
+  --color-bg-secondary: #111;
+  --color-bg-minor: #10323e;
+  --color-bg-minor-grey: #ebeeef;
+  --color-bg-primary: var(--color-white);
+  --color-bg-accent: #f95d51;
+
+  --color-text-primary: #222;
+  --color-text-minor: var(--color-bg-minor);
+  --color-text-secondary: #8e8e8e;
+  --color-text-invert: #fefefe;
+  --color-text-invert-seccondary: rgb(254 254 254 / 80%);
+  --color-text-accent: #e90018;
+
+  --color-control-accent: var(--color-bg-minor);
+  --color-control-primary: var(--color-text-secondary);
+  --color-control-secondary: #e0e1e1;
+  --color-control-minor: var(--color-bg-minor-grey);
+
+  --color-btn-accent: var(--color-text-accent);
+  --color-btn-primary: var(--color-bg-minor);
+  --color-btn-secondary: var(--color-text-invert);
+
+  --color-hover-accent: #ff3342;
+  --color-hover-primary: #194d62;
+
+  --color-grey-600: #99a5b0;
+  --color-grey-300: #eff1f5;
+
+  /* etc */
+  --transition: 200ms ease-in;
+  --box-shadow: 0 10px 40px rgb(10 12 16 / 7%);
+  --grid-offset: 4rem;
+}
+
+@import "./helpers/**/*";
+@import "./vendor/**/*";
+@import "./settings/**/*";
+@import "./UI/**/*";
+@import "./pages/**/*";
