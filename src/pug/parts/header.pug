@@ -1,6 +1,25 @@
+-
+  nav = [
+    "Инжиниринг и сервис", "Проектные решения",
+    "Поставка", "О нас", "Контакты"
+  ]
+
 header.header
   .site-container
-    a(href="/")
-      img(src="assets/images/logo.svg" alt="Logo")
-    button.button(data-path="modal")
-      | Открыть модалку
+    a.header__logo(href="/")
+      img(src="assets/images/logo.svg" alt="Логотип компании")
+
+    .header__nav-wrapper
+      button.header__mobile-menu
+        | Меню
+      nav.nav.header__nav
+        ul.nav__list
+          for item in nav
+            li.nav__item
+              a(href="/" class="nav__link")= item
+
+      .header__catalog-btn
+        +icon-mono("menu-square")(width="24" height="24" class="header__catalog-btn-icon")
+        a(href="/") Каталог
+
+    button.button.button--accent.header__btn Оставить заявку

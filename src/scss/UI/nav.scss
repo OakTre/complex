@@ -1,0 +1,22 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: var(--offset32);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include mq(md) {
+      margin-right: var(--offset16);
+    }
+  }
+
+  &__link {
+    font: var(--font-text-20-md);
+  }
+}

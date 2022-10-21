@@ -1,3 +1,40 @@
+-
+  nav_footer = [
+    "Инжиниринг и сервис", "Поставки",
+    "Контакты", "Проектные решения", "О нас"
+  ]
+
 footer.footer
-	.site-container
-		h1 footer
+  .site-container
+    .footer__top-block
+      .footer__nav
+        for item in nav_footer
+          .footer__nav-item
+            a(href="/")= item
+
+      .footer__main-links-wrapper
+        .footer__main-links
+          a.footer__main-tel(href="tel:+78007075705") 8 800 707-57-05
+          a.footer__main-email(href="email:order@compeq.ru") order@compeq.ru
+
+        .footer__top-block-text
+          p.footer__small-legend
+            | РФ, РТ, Набережные Челны, ЗЯБ, ул.&nbsp;Хади&nbsp;Такташа,&nbsp;34а, строение&nbsp;2
+
+          p.footer__small-legend
+            | Принимаем заказы по всей #[br] России с 9:00–20:00 без выходных
+    .footer__bottom-block
+      .footer__bottom-block-links-wrapper
+        p.footer__small-legend.footer__bottom-block-links © ООО «Комплексное оснащение»
+        a.footer__small-legend.footer__bottom-block-links(href="/")  Карта сайта
+        a.footer__small-legend.footer__bottom-block-links(href="/")  KORZILLA создание и продвижение сайтов
+
+      .footer__bottom-block-cities
+        a(href="tel:+79270345654" class="footer__cities-tel" data-city="Казань" title="Телефон в Казани")
+          | +7 (927) 034-56-54
+        a(href="tel:+79270345654" class="footer__cities-tel" data-city="Новосибирск" title="Телефон в Новосибирскe")
+          | +7 (927) 493-83-27
+        a(href="tel:+79270345654" class="footer__cities-tel" data-city="Ульяновск" title="Телефон в Ульяновске")
+          | +7 (937) 522-80-32
+        a(href="tel:+79270345654" class="footer__cities-tel" data-city="Екатеринбург" title="Телефон в Екатеринбурге")
+          | +7 (927) 044-40-59

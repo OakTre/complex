@@ -1,6 +1,51 @@
 .button {
-  padding: 1rem 2rem;
+  padding: 1.2rem 4rem;
   color: var(--color-white);
-  background-color: blue;
-  border-radius: 2rem;
+  font: var(--font-text-20-md);
+  background-color: var(--color-btn-primary);
+  border-radius: 8rem;
+  transition: color var(--transition), background-color var(--transition);
+
+  @include mq(lg, min) {
+    &:hover {
+      background-color: var(--color-hover-primary);
+    }
+
+    &:focus.focus-visible {
+      outline: 2px solid var(--color-white);
+    }
+  }
+
+  &--secondary {
+    background-color: var(--color-btn-secondary);
+
+    @include mq(lg, min) {
+      &:hover {
+        color: var(--color-text-accent);
+      }
+
+      &:focus.focus-visible {
+        color: var(--color-text-minor);
+        outline: 2px solid var(--color-control-accent);
+      }
+    }
+  }
+
+  &--accent {
+    background-color: var(--color-btn-accent);
+
+    @include mq(lg, min) {
+      &:hover {
+        background-color: var(--color-hover-accent);
+      }
+
+      &:focus.focus-visible {
+        outline: 2px solid var(--color-control-accent);
+      }
+    }
+  }
+
+  @include mq(lg) {
+    padding: 1.2rem 3.2rem;
+  }
 }

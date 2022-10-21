@@ -1,3 +1,212 @@
 .footer {
-  display: block;
+  padding-top: var(--offset60);
+  padding-bottom: var(--offset24);
+  color: var(--color-white);
+  background-color: var(--color-bg-secondary);
+
+  &__top-block {
+    display: flex;
+    margin-bottom: var(--offset56);
+
+    @include mq(xl) {
+      align-items: flex-start;
+    }
+
+    @include mq(md) {
+      flex-direction: column;
+    }
+
+    @include mq(custom, max, 500) {
+      margin-bottom: var(--offset40);
+    }
+  }
+
+  &__top-block-text {
+    display: flex;
+    margin-left: var(--offset60);
+
+    p {
+      margin-right: var(--offset40);
+
+      &:nth-child(1) {
+        max-width: 24.8rem;
+      }
+
+      &:nth-child(2) {
+        max-width: 27.6rem;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include mq(xl) {
+        margin-right: var(--offset20);
+      }
+    }
+
+    @include mq(xl) {
+      margin-top: var(--offset24);
+      margin-left: 0;
+    }
+
+    @include mq(lg) {
+      display: flex;
+      flex-direction: column;
+      gap: var(--offset12);
+      margin: 0;
+      margin-left: var(--offset32);
+
+      p {
+        max-width: 24.8rem !important;
+        margin: 0 !important;
+      }
+    }
+
+    @include mq(md) {
+      flex-direction: row;
+      /* stylelint-disable-next-line declaration-block-no-shorthand-property-overrides */
+      flex-flow: wrap;
+    }
+
+    @include mq(custom, max, 500) {
+      flex-direction: column;
+      margin-top: var(--offset32);
+      margin-left: 0;
+
+      p {
+        max-width: 100% !important;
+      }
+    }
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--offset24);
+    max-width: 45.7rem;
+
+    @include mq(lg) {
+      grid-row-gap: var(--offset8);
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq(sm) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__nav-item {
+    font: var(--font-text-20-md);
+    white-space: nowrap;
+
+    @include mq(sm) {
+      white-space: normal;
+    }
+  }
+
+  &__bottom-block-links-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__bottom-block {
+    display: flex;
+    align-items: flex-end;
+
+    &-links {
+      margin-right: var(--offset16);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__small-legend {
+    color: var(--color-text-secondary);
+    font: var(--font-text-16-reg);
+  }
+
+  &__cities-tel {
+    display: inline-block;
+    margin-right: var(--offset16);
+    color: var(--color-text-secondary);
+    font: var(--font-text-14-md);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::before {
+      display: block;
+      color: var(--color-white);
+      content: attr(data-city);
+    }
+  }
+
+  &__bottom-block-cities {
+    display: flex;
+    flex-shrink: 0;
+    margin-left: auto;
+
+    @include mq(xl) {
+      width: 50%;
+    }
+
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  &__main-links-wrapper {
+    display: flex;
+    margin-left: auto;
+
+    @include mq(xl) {
+      flex-wrap: wrap;
+      width: 50%;
+    }
+
+    @include mq(lg) {
+      flex-wrap: nowrap;
+      width: auto;
+    }
+
+    @include mq(md) {
+      margin-top: var(--offset60);
+      margin-left: 0;
+    }
+
+    @include mq(custom, max, 500) {
+      flex-direction: column;
+    }
+  }
+
+  &__main-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include mq(md) {
+      flex-shrink: 0;
+    }
+  }
+
+  &__main-tel {
+    font: var(--font-h3);
+
+    @include mq(custom, max, 500) {
+      font: var(--font-h4);
+    }
+  }
+
+  &__main-email {
+    font: var(--font-h5);
+
+    @include mq(custom, max, 500) {
+      font: var(--font-text-20-md);
+    }
+  }
 }

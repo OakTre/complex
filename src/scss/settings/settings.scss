@@ -10,12 +10,28 @@
 html {
   font-size: 10px;
   line-height: 1.2;
+
+  @include mq(custom, max, 1680) {
+    font-size: 9px;
+  }
+
+  @include mq(custom, max, 1536) {
+    font-size: 8px;
+  }
+
+  @include mq(xl) {
+    font-size: 10px;
+  }
+
+  @include mq(custom, max, 320) {
+    font-size: 9px;
+  }
 }
 
 body {
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   font: var(--font-body);
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-primary);
 }
 
 ul,
@@ -120,9 +136,13 @@ button {
 a {
   background-color: transparent;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color var(--transition);
   color: inherit;
   outline: none;
+
+  &:hover {
+    color: var(--color-hover-accent);
+  }
 }
 
 svg {
@@ -156,9 +176,9 @@ img {
 
 .site-container {
   width: 100%;
-  max-width: 1470px;
+  max-width: 1676px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 .page-wrapper {

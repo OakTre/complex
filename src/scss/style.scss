@@ -1,10 +1,12 @@
+/* stylelint-disable max-line-length */
+/* stylelint-disable value-keyword-case */
 /* stylelint-disable no-eol-whitespace */
 /* stylelint-disable custom-property-empty-line-before */
 /* stylelint-disable no-invalid-position-at-import-rule */
 :root {
   /* typography  */
-  --main-ff: "Golos", sans-serif;
-  --second-ff: "Golos", sans-serif;
+  --main-ff: "Golos", -apple-system, BlinkMacSystemFont, Segoe UI, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --second-ff: "Golos", -apple-system, BlinkMacSystemFont, Segoe UI, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   --font-h1: 600 16rem/1 var(--main-ff);
   --font-h2: 600 5.6rem/7.2rem var(--main-ff);
@@ -17,9 +19,9 @@
   --font-text-20-md: 500 2rem/2.8rem var(--main-ff);
   --font-text-20-bld: 700 2rem/2.8rem var(--main-ff);
 
-  --font-text-16-reg: 400 1.6rem/2.8rem var(--main-ff);
-  --font-text-16-md: 500 1.6rem/2.8rem var(--main-ff);
-  --font-text-16-bld: 700 1.6rem/2.8rem var(--main-ff);
+  --font-text-16-reg: 400 1.6rem/2.4rem var(--main-ff);
+  --font-text-16-md: 500 1.6rem/2.4rem var(--main-ff);
+  --font-text-16-bld: 700 1.6rem/2.4rem var(--main-ff);
 
   --font-text-14-md: 500 1.4rem/2.4rem var(--main-ff);
   --font-body: var(--font-text-16-reg);
@@ -56,9 +58,23 @@
   --color-grey-300: #eff1f5;
 
   /* etc */
-  --transition: 200ms ease-in;
+  --transition: 100ms ease-in;
   --box-shadow: 0 10px 40px rgb(10 12 16 / 7%);
   --grid-offset: 4rem;
+
+  --section-offset140: 14rem;
+  --offset120: 12rem;
+  --offset80: 8rem;
+  --offset60: 6rem;
+  --offset56: 5.6rem;
+  --offset40: 4rem;
+  --offset32: 3.2rem;
+  --offset24: 2.4rem;
+  --offset20: 2rem;
+  --offset16: 1.6rem;
+  --offset12: 1.2rem;
+  --offset10: 1rem;
+  --offset8: 0.8rem;
 }
 
 @import "./helpers/**/*";
@@ -66,3 +82,34 @@
 @import "./settings/**/*";
 @import "./UI/**/*";
 @import "./pages/**/*";
+
+@include mq(custom, max, 1280) {
+  :root {
+    --section-offset140: 12rem;
+    --grid-offset: 2rem;
+  }
+}
+
+@include mq(lg) {
+  :root {
+    --font-h3: var(--font-h4);
+    --font-h2: var(--font-h3);
+    --font-h5: var(--font-h6);
+
+    --font-text-20-reg: var(--font-text-16-reg);
+    --font-text-20-md: var(--font-text-16-md);
+    --font-text-20-bld: var(--font-text-16-bld);
+
+    --section-offset140: 8rem;
+    --offset60: 4rem;
+  }
+}
+
+@include mq(sm) {
+  :root {
+    --font-h3: var(--font-h5);
+    --font-h2: var(--font-h4);
+
+    --section-offset140: 6rem;
+  }
+}
