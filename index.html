@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Описание сайта">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Главная | Название сайта</title>
+    <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.0.0">
+  </head>
+  <body class="page-home">
+    <div class="page-wrapper">
+
+      <header class="header">
+        <div class="site-container">
+          <a class="header__logo" href="/">
+            <img src="assets/images/logo.svg" alt="Логотип компании">
+          </a>
+          <div class="header__nav-wrapper">
+            <button class="header__mobile-menu">Меню</button>
+            <nav class="nav header__nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link" href="/">Инжиниринг и сервис</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/">Проектные решения</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/">Поставка</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/">О нас</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__catalog-btn">
+              <svg class="icon icon-menu-square header__catalog-btn-icon" width="24" height="24">
+                <use xlink:href="assets/images/sprites/sprite-mono.svg#menu-square"></use>
+              </svg>
+              <a href="/">Каталог</a>
+            </div>
+          </div>
+          <button class="button button--accent header__btn">Оставить заявку</button>
+        </div>
+      </header>
+
+      <main class="page-main main">
+        <section class="intro"></section>
+      </main>
+
+      <footer class="footer">
+        <div class="site-container">
+          <div class="footer__top-block">
+            <div class="footer__nav">
+              <div class="footer__nav-item">
+                <a href="/">Инжиниринг и сервис</a>
+              </div>
+              <div class="footer__nav-item">
+                <a href="/">Поставки</a>
+              </div>
+              <div class="footer__nav-item">
+                <a href="/">Контакты</a>
+              </div>
+              <div class="footer__nav-item">
+                <a href="/">Проектные решения</a>
+              </div>
+              <div class="footer__nav-item">
+                <a href="/">О нас</a>
+              </div>
+            </div>
+            <div class="footer__main-links-wrapper">
+              <div class="footer__main-links">
+                <a class="footer__main-tel" href="tel:+78007075705">8 800 707-57-05</a>
+                <a class="footer__main-email" href="email:order@compeq.ru">order@compeq.ru</a>
+              </div>
+              <div class="footer__top-block-text">
+                <p class="footer__small-legend">РФ, РТ, Набережные Челны, ЗЯБ, ул.&nbsp;Хади&nbsp;Такташа,&nbsp;34а, строение&nbsp;2</p>
+                <p class="footer__small-legend">Принимаем заказы по всей<br>России с 9:00–20:00 без выходных</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom-block">
+            <div class="footer__bottom-block-links-wrapper">
+              <p class="footer__small-legend footer__bottom-block-links">© ООО «Комплексное оснащение»</p>
+              <a class="footer__small-legend footer__bottom-block-links" href="/">Карта сайта</a>
+              <a class="footer__small-legend footer__bottom-block-links" href="/">KORZILLA создание и продвижение сайтов</a>
+            </div>
+            <div class="footer__bottom-block-cities">
+              <a class="footer__cities-tel" href="tel:+79270345654" data-city="Казань" title="Телефон в Казани">+7 (927) 034-56-54</a>
+              <a class="footer__cities-tel" href="tel:+79270345654" data-city="Новосибирск" title="Телефон в Новосибирскe">+7 (927) 493-83-27</a>
+              <a class="footer__cities-tel" href="tel:+79270345654" data-city="Ульяновск" title="Телефон в Ульяновске">+7 (937) 522-80-32</a>
+              <a class="footer__cities-tel" href="tel:+79270345654" data-city="Екатеринбург" title="Телефон в Екатеринбурге">+7 (927) 044-40-59</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal">
+      <div class="modal__container" data-target="modal">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
+          </button>
+          <div class="modal__legend">Поздравляем вы открыли модалку!</div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <script src="assets/js/main.js?v=0.0.0.0"></script>
+  <script src="assets/js/backend.js?v=0.0.0.0"></script>
+</html>
