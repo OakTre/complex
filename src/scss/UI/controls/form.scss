@@ -1,0 +1,23 @@
+.form {
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--offset16);
+  }
+
+  &__btn {
+    margin-top: var(--offset40);
+  }
+
+  &__agreeemnt {
+    max-width: 48rem;
+    margin-top: var(--offset16);
+    font: var(--font-text-16-reg);
+
+    a {
+      &:hover {
+        color: var(--color-hover-primary);
+      }
+    }
+  }
+}

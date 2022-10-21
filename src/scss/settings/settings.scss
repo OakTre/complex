@@ -221,3 +221,11 @@ a:focus {
 .js-focus-visible a:focus:not(.focus-visible) {
   outline: none;
 }
+
+.section {
+  margin-bottom: var(--section-offset140);
+}
+
+.site-second-heading {
+  font: var(--font-h2);
+}

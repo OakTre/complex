@@ -69,6 +69,7 @@
   --offset56: 5.6rem;
   --offset40: 4rem;
   --offset32: 3.2rem;
+  --offset28: 2.8em;
   --offset24: 2.4rem;
   --offset20: 2rem;
   --offset16: 1.6rem;
@@ -81,6 +82,7 @@
 @import "./vendor/**/*";
 @import "./settings/**/*";
 @import "./UI/**/*";
+@import "./blocks/**/*";
 @import "./pages/**/*";
 
 @include mq(custom, max, 1280) {

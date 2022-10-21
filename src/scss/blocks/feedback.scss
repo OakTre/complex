@@ -1,0 +1,23 @@
+.feedback {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-offset);
+  padding: var(--offset80) 11.2rem;
+  color: var(--color-white);
+  background-color: var(--color-bg-accent);
+  border-radius: var(--offset20);
+  box-shadow: var(--box-shadow);
+
+  &__block {
+    grid-column: 6 span;
+  }
+
+  &__heading {
+    margin-bottom: var(--offset24);
+  }
+
+  &__text {
+    max-width: 47.2rem;
+    font: var(--font-h5);
+  }
+}

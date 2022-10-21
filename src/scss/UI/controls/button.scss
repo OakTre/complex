@@ -17,11 +17,13 @@
   }
 
   &--secondary {
+    color: var(--color-text-minor);
     background-color: var(--color-btn-secondary);
 
     @include mq(lg, min) {
       &:hover {
         color: var(--color-text-accent);
+        background-color: var(--color-white);
       }
 
       &:focus.focus-visible {

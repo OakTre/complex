@@ -1,0 +1,20 @@
+form.form
+  .form__input-container
+    .input__container
+      label.input__wrapper
+        input(type="text" class="input" name="name" placeholder="Имя")
+        span.input__label Имя
+
+    .input__container
+      label.input__wrapper
+        input(type="email" class="input" name="email" placeholder="Email")
+        span.input__label Email
+
+    .input__container
+      label.input__wrapper
+        input(type="text" class="input" name="question" placeholder="Опишите запрос")
+        span.input__label Опишите запрос
+
+  button.button.button--secondary.form__btn Отправить
+  p.form__agreeemnt
+    | *нажимая отправить, вы соглашаетесь с #[a(href="/") условиями обработки персональных данных]

@@ -1,0 +1,54 @@
+/* stylelint-disable selector-class-pattern */
+.input {
+  height: 100%;
+  padding: var(--offset8) var(--offset12);
+  padding: 0;
+  color: currentcolor;
+  font: var(--font-text-20-reg);
+  background-color: transparent;
+  border-bottom: 1px solid currentcolor;
+
+  @include placeholder () {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__label {
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    display: block;
+    color: currentcolor;
+    font: var(--font-text-20-reg);
+    transform: scale(0.8);
+    transform-origin: left top;
+    transition: transform var(--transition), top var(--transition);
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: block;
+    height: 4.8rem;
+    padding-bottom: var(--offset28) var(--offset24);
+  }
+
+  &__container {
+    height: 10rem;
+    padding: var(--offset24) 0;
+  }
+
+  &:placeholder-shown {
+    ~.input__label {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &:focus ~ .input__label {
+    top: -2rem;
+    transform: scale(0.8);
+  }
+}
