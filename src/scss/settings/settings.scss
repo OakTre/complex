@@ -178,7 +178,7 @@ img {
   width: 100%;
   max-width: 1676px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--content-padding);
 }
 
 .page-wrapper {
@@ -228,4 +228,36 @@ a:focus {
 
 .site-second-heading {
   font: var(--font-h2);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-offset);
+
+  @include mq(lg) {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @include mq(sm) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.site-more-link {
+  flex-shrink: 0;
+  font: var(--font-text-20-md);
+
+  @include mq(sm) {
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url("../images/icons/mono/link.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+    span {
+      display: none;
+    }
+  }
 }

@@ -1,0 +1,81 @@
+.whyus {
+  &__heading {
+    margin-bottom: var(--offset60);
+  }
+
+  &__list {
+    grid-row-gap: var(--offset40);
+
+    @include mq(lg) {
+      grid-row-gap: var(--offset32);
+    }
+
+    @include mq(sm) {
+      grid-row-gap: var(--offset40);
+    }
+  }
+
+  &__item {
+    display: flex;
+    grid-column: 4 span;
+    align-items: center;
+
+    p {
+      max-width: 65%;
+      font: var(--font-text-20-md);
+    }
+
+    @include mq(xl) {
+      grid-column: 6 span;
+    }
+
+    @include mq(lg) {
+      grid-column: 4 span;
+    }
+
+    @include mq(sm) {
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        max-width: 90%;
+        text-align: center;
+      }
+    }
+  }
+
+  &__img-wrapper {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: var(--offset120);
+    height: var(--offset120);
+    margin-right: var(--offset32);
+    background-color: var(--color-bg-minor-grey);
+    border-radius: 50%;
+
+    @include mq(lg) {
+      width: var(--offset80);
+      height: var(--offset80);
+      margin-right: var(--offset16);
+    }
+
+    @include mq(sm) {
+      margin-right: 0;
+      margin-bottom: var(--offset16);
+    }
+  }
+
+  &__img {
+    display: block;
+    width: var(--offset80);
+    height: var(--offset80);
+    object-fit: contain;
+
+    @include mq(lg) {
+      width: var(--offset60);
+      height: var(--offset60);
+    }
+  }
+}

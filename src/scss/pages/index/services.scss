@@ -1,0 +1,17 @@
+.services {
+  &__list {
+    grid-row-gap: var(--offset40);
+  }
+
+  &__item {
+    grid-column: 4 span;
+
+    @include mq(xl) {
+      grid-column: 6 span;
+    }
+
+    @include mq(lg) {
+      grid-column: 4 span;
+    }
+  }
+}

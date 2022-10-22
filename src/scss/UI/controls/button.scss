@@ -1,5 +1,5 @@
 .button {
-  padding: 1.2rem 4rem;
+  padding: var(--offset12) var(--offset40);
   color: var(--color-white);
   font: var(--font-text-20-md);
   background-color: var(--color-btn-primary);
@@ -48,6 +48,6 @@
   }
 
   @include mq(lg) {
-    padding: 1.2rem 3.2rem;
+    padding: var(--offset12) var(--offset32);
   }
 }

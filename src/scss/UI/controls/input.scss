@@ -33,11 +33,19 @@
     display: block;
     height: 4.8rem;
     padding-bottom: var(--offset28) var(--offset24);
+
+    @include mq(lg) {
+      margin-bottom: 0.4rem;
+    }
   }
 
   &__container {
     height: 10rem;
     padding: var(--offset24) 0;
+
+    @include mq(lg) {
+      height: 8.4rem;
+    }
   }
 
   &:placeholder-shown {

@@ -61,6 +61,7 @@
   --transition: 100ms ease-in;
   --box-shadow: 0 10px 40px rgb(10 12 16 / 7%);
   --grid-offset: 4rem;
+  --content-padding: 20px;
 
   --section-offset140: 14rem;
   --offset120: 12rem;
@@ -103,7 +104,6 @@
     --font-text-20-bld: var(--font-text-16-bld);
 
     --section-offset140: 8rem;
-    --offset60: 4rem;
   }
 }
 

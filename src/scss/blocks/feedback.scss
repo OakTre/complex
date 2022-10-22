@@ -14,10 +14,39 @@
 
   &__heading {
     margin-bottom: var(--offset24);
+
+    @include mq(sm) {
+      margin-bottom: var(--offset16);
+    }
   }
 
   &__text {
     max-width: 47.2rem;
     font: var(--font-h5);
+
+    @include mq(sm) {
+      font: var(--font-text-16-md);
+    }
+  }
+
+  @include mq(xl) {
+    padding: var(--offset80);
+  }
+
+  @include mq(lg) {
+    display: block;
+    padding: var(--offset60) var(--offset80);
+    border-radius: 1.2rem;
+  }
+
+  @include mq(md) {
+    padding: var(--offset60);
+  }
+
+  @include mq(sm) {
+    width: auto;
+    margin-right: calc(var(--content-padding) * -1);
+    margin-left: calc(var(--content-padding) * -1);
+    padding: var(--offset60) var(--content-padding);
   }
 }

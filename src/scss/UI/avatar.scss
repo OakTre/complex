@@ -1,0 +1,33 @@
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 21.4rem;
+
+  img {
+    width: var(--offset120);
+    height: var(--offset120);
+    margin-bottom: var(--offset24);
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__heading {
+    font: var(--font-h5);
+  }
+
+  &__text {
+    color: var(--color-text-secondary);
+    font: var(--font-text-16-md);
+  }
+
+  @include mq(lg) {
+    width: 18.3rem;
+
+    img {
+      width: 8rem;
+      height: 8rem;
+      margin-bottom: var(--offset16);
+    }
+  }
+}
