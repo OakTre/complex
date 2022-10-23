@@ -1,0 +1,28 @@
+.projects {
+  &__heading-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: var(--offset60);
+
+    @include mq(lg) {
+      margin-bottom: var(--offset40);
+    }
+  }
+
+  &__list {
+    grid-row-gap: var(--offset40);
+  }
+
+  &__item {
+    grid-column: 4 span;
+
+    @include mq(xl) {
+      grid-column: 6 span;
+    }
+
+    @include mq(lg) {
+      grid-column: 4 span;
+    }
+  }
+}

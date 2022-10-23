@@ -1,15 +1,128 @@
 .intro {
-  z-index: 1;
-  padding-top: 8rem;
+  min-height: 90vh;
+  padding-bottom: var(--offset60);
+  color: var(--color-white);
+  background-color: var(--color-bg-minor);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: -1;
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
-    transform: translate(-50%, -50%);
+  @include mq(sm) {
+    min-height: 0;
+  }
+
+  &__inner {
+    padding-top: 6rem;
+
+    @include mq(md) {
+      padding-top: 3rem;
+    }
+  }
+
+  &__legend {
+    margin-bottom: 3rem;
+    font: 600 16rem/1 var(--main-ff);
+    text-transform: uppercase;
+
+    &:nth-last-of-type(1) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &::before {
+      display: block;
+      font: var(--font-h4);
+      font-weight: 500;
+      text-transform: lowercase;
+      content: attr(data-legend);
+    }
+
+    @include mq(xl) {
+      margin-bottom: 1rem;
+      font: 600 11rem/12rem var(--main-ff);
+    }
+
+    @include mq(lg) {
+      font: 600 8rem/1 var(--main-ff);
+
+      &::before {
+        font: var(--font-h6);
+        font-weight: 500;
+      }
+    }
+
+    @include mq(sm) {
+      font: 700 4rem/1 var(--main-ff);
+
+      &::before {
+        font: var(--font-h6);
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--offset40);
+
+    @include mq(md) {
+      flex-direction: column;
+      justify-content: stretch;
+    }
+  }
+
+  &__text {
+    max-width: 83.3rem;
+    font: var(--font-h5);
+
+    @include mq(xl) {
+      max-width: 68rem;
+      font: var(--font-h6);
+    }
+
+    @include mq(md) {
+      font: var(--font-text-16-md);
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font: var(--font-text-20-md);
+    text-align: right;
+
+    @include mq(md) {
+      align-items: flex-start;
+      margin-top: var(--offset60);
+      text-align: left;
+    }
+  }
+
+  &__link-sbis {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 8rem;
+
+    .icon {
+      margin-left: 1.2rem;
+      color: var(--color-white);
+      transition: color var(--transition);
+      fill: none;
+      stroke: currentcolor;
+      stroke-width: 2px;
+    }
+
+    &:hover {
+      .icon {
+        color: var(--color-text-accent);
+      }
+    }
+
+    @include mq(md) {
+      margin-top: 0;
+    }
   }
 }

@@ -6,11 +6,11 @@
 		"dev": "gulp watch",
 		"build:dev": "gulp build",
 		"build:prod": "gulp build --prod",
-    "predeploy": "gulp build --prod",
+		"predeploy": "gulp build --prod",
 		"deploy": "gh-pages -d build",
 		"squoosh": "gulp squoosh"
 	},
-  "repository": {
+	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/USER/PROJECT.git"
 	},
@@ -87,6 +87,9 @@
 		"vinyl-source-stream": "^2.0.0"
 	},
 	"dependencies": {
+		"dayjs": "1.11.6",
+		"jquery": "3.6.1",
+		"parsleyjs": "2.9.2",
 		"reset-css": "^5.0.1",
 		"vanilla-lazyload": "^17.6.1"
 	}

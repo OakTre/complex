@@ -62,6 +62,7 @@
   --box-shadow: 0 10px 40px rgb(10 12 16 / 7%);
   --grid-offset: 4rem;
   --content-padding: 20px;
+  --header-height: 10.4rem;
 
   --section-offset140: 14rem;
   --offset120: 12rem;
@@ -90,6 +91,7 @@
   :root {
     --section-offset140: 12rem;
     --grid-offset: 2rem;
+    --header-height: 16.2rem;
   }
 }
 
@@ -104,6 +106,7 @@
     --font-text-20-bld: var(--font-text-16-bld);
 
     --section-offset140: 8rem;
+    --header-height: 14.4rem;
   }
 }
 
@@ -113,5 +116,6 @@
     --font-h2: var(--font-h4);
 
     --section-offset140: 6rem;
+    --header-height: 13.8rem;
   }
 }

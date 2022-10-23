@@ -1,0 +1,19 @@
+-
+  row1 = [
+    {name: "Индустриальные редукторы и электродвигатели", icon: "img1"},
+    {name: "Паровая арматура", icon: "img2"},
+    {name: "Оборудование <br> для птицеводства", icon: "img3"},
+    {name: "Промышленные датчики и взрывзащита", icon: "img4"},
+    {name: "Промышленная химия", icon: "img5"},
+    {name: "Конвеерная лента", icon: "img6"},
+  ]
+
+section.section
+  .site-container
+    .main-directions
+      h2.main-directions__heading.site-second-heading
+        | Основные направления
+    .main-directions__container.grid-container
+      for item in row1
+        .main-directions-card(style={"background-image": `url(../assets/images/main-directions-card/${item.icon}.jpg)`})
+          a(href="/" class="main-directions-card__link")!= item.name

@@ -1,18 +1,21 @@
-form.form
+form.form(data-need-validation)
   .form__input-container
     .input__container
-      label.input__wrapper
-        input(type="text" class="input" name="name" placeholder="Имя")
+      label.input__wrapper.js-validation-wrapper
+        input(type="text" class="input" name="name" required placeholder="Имя")
+        +icon-multi("alert")(width="24" height="24" class="input__error-icon")
         span.input__label Имя
 
     .input__container
-      label.input__wrapper
-        input(type="email" class="input" name="email" placeholder="Email")
+      label.input__wrapper.js-validation-wrapper
+        input(type="email" class="input" name="email" data-parsley-email required placeholder="Email")
+        +icon-multi("alert")(width="24" height="24" class="input__error-icon")
         span.input__label Email
 
     .input__container
-      label.input__wrapper
-        input(type="text" class="input" name="question" placeholder="Опишите запрос")
+      label.input__wrapper.js-validation-wrapper
+        input(type="text" class="input" name="question" required placeholder="Опишите запрос")
+        +icon-multi("alert")(width="24" height="24" class="input__error-icon")
         span.input__label Опишите запрос
 
   button.button.button--secondary.form__btn Отправить

@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 /* stylelint-disable selector-class-pattern */
 .input {
   height: 100%;
@@ -34,6 +35,18 @@
     height: 4.8rem;
     padding-bottom: var(--offset28) var(--offset24);
 
+    &.is-error {
+      .input__error-icon {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .parsley-errors-list {
+      font: var(--font-text-14-md);
+      font-weight: 400;
+    }
+
     @include mq(lg) {
       margin-bottom: 0.4rem;
     }
@@ -48,6 +61,21 @@
     }
   }
 
+  &__error-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    transform: translateY(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity var(--transition), visibility var(--transition);
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 2px;
+  }
+
   &:placeholder-shown {
     ~.input__label {
       top: 50%;
@@ -55,7 +83,7 @@
     }
   }
 
-  &:focus ~ .input__label {
+  &:focus~.input__label {
     top: -2rem;
     transform: scale(0.8);
   }
