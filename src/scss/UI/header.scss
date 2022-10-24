@@ -53,7 +53,7 @@
     }
 
     &--secondary {
-      display: none;
+      display: none !important;
     }
   }
 
@@ -152,11 +152,11 @@
     background-color: var(--color-white);
 
     .header__logo {
-      display: none;
+      display: none !important;
     }
 
     .header__logo--secondary {
-      display: block;
+      display: flex !important;
     }
   }
 }
