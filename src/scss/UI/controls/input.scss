@@ -83,7 +83,7 @@
     }
   }
 
-  &:focus~.input__label {
+  &:focus ~ .input__label {
     top: -2rem;
     transform: scale(0.8);
   }
