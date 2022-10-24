@@ -15,5 +15,5 @@ section.section
         | Основные направления
     .main-directions__container.grid-container
       for item in row1
-        .main-directions-card(style={"background-image": `url(../assets/images/main-directions-card/${item.icon}.jpg)`})
+        .main-directions-card(style={"background-image": `url(assets/images/main-directions-card/${item.icon}.jpg)`})
           a(href="/" class="main-directions-card__link")!= item.name
