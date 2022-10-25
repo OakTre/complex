@@ -1,0 +1,14 @@
+-
+  nav_menu = [
+    "Инжиниринг и сервис", "Проектные решения",
+    "Поставка", "О нас", "Контакты"
+  ]
+
+.mobile-menu
+  .mobile-menu__content
+    button.mobile-menu__close(aria-label="Закрыть меню")
+      +icon-mono("close")(width="28" height="28" class="mobile-menu__close-icon")
+    ul.mobile-menu__list
+      for item in nav_menu
+        li.mobile-menu__item
+          a(href="/")= item

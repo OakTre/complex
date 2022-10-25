@@ -1,0 +1,39 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000, $alpha: 50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity var(--transition), visibility var(--transition);
+
+  &.is-active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__content {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    padding: var(--offset60) var(--content-padding);
+    overflow: auto;
+    background-color: var(--color-white);
+  }
+
+  &__item {
+    margin-bottom: var(--offset16);
+    font: var(--font-h5);
+  }
+
+  &__close {
+    position: absolute;
+    top: var(--offset16);
+    right: var(--offset16);
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}

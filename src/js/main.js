@@ -4,6 +4,7 @@ import lazyIMages from './modules/lazyIMages';
 import documenReady from './helpers/documenReady';
 import initModal from './modules/initModal';
 import validation from './modules/validation';
+import openMenu from './modules/openMenu';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -11,4 +12,5 @@ documenReady(() => {
   lazyIMages();
   initModal();
   validation();
+  openMenu();
 });
