@@ -1,0 +1,71 @@
+.service-provider {
+  &__heading {
+    max-width: 81.8rem;
+    margin-bottom: var(--offset60);
+    font: var(--font-h4);
+
+    @include mq(lg) {
+      margin-bottom: var(--offset40);
+    }
+
+    @include mq(sm) {
+      font: var(--font-h6);
+    }
+  }
+
+  &__image-wrapper {
+    grid-column: 8 span;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: var(--offset20);
+
+      @include mq(xl) {
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @include mq(md) {
+        height: auto;
+        object-fit: contain;
+      }
+
+      @include mq(sm) {
+        height: 48rem;
+        object-fit: cover;
+        object-position: 60%;
+        border-radius: var(--offset12);
+      }
+    }
+
+    @include mq(xl) {
+      grid-column: 7 span;
+    }
+
+    @include mq(lg) {
+      grid-column: 5 span;
+    }
+
+    @include mq(md) {
+      grid-column: 12 span;
+    }
+  }
+
+  &__col {
+    grid-column: 4 span;
+
+    @include mq(xl) {
+      grid-column: 5 span;
+    }
+
+    @include mq(lg) {
+      grid-column: 3 span;
+    }
+
+    @include mq(md) {
+      grid-column: 12 span;
+    }
+  }
+}

@@ -1,10 +1,17 @@
 -
   nav = [
-    "Инжиниринг и сервис", "Проектные решения",
-    "Поставка", "О нас", "Контакты"
+    { name: "Инжиниринг и сервис", link: "./service.html" },
+    { name: "Проектные решения", link: "./" },
+    { name: "Поставка", link: "./" },
+    { name: "О нас", link: "./" },
+    { name: "Контакты", link: "./" }
   ]
 
-header.header
+  classWhite = [
+    "main"
+  ]
+
+header.header(class={"header--white": classWhite.includes(name)})
   .site-container
     a.header__logo(href="/")
       img(src="assets/images/logo-white.svg" alt="Логотип компании")
@@ -18,7 +25,7 @@ header.header
         ul.nav__list
           for item in nav
             li.nav__item
-              a(href="/" class="nav__link")= item
+              a(href=item.link class="nav__link")= item.name
 
       .header__catalog-btn
         +icon-mono("menu-square")(width="24" height="24" class="header__catalog-btn-icon")

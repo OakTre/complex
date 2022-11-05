@@ -1,0 +1,47 @@
+.top-offset
+section.section.intro-page
+  .site-container
+    h1.site-second-heading.intro-page__heading Инжиниринг и сервис
+    p.intro-page__text
+      | Мы не только поставляем, но и осуществляем сервисные и инжиниринговые услуги для промышленных и сельскохозяйственных предприятий
+
+
+-
+  cards = [
+    { name: "Ремонт и обслуживание",
+    links: ["Производственных линий", "Промышленных насосов", "Редукторов и мотор-редукторов", "Прочего промышленного оборудования"] },
+    { name: "3D-моделирование и изготовление деталей",
+    links: ["Печать на 3D-принтере", "Пластиковые детали на станке ЧПУ", "Несерийные металлоконструкции", "Тефлорирование"] },
+    { name: "Выездные работы",
+    links: ["Монтаж, ремонт, пусконаладка, ППР, аварийные выезды или аварийная "] },
+  ]
+
+section.section
+  .site-container
+    ul.nav-cards.grid-container
+      for item in cards
+        li.nav-cards__item
+          article.nav-card
+            h3.nav-card__heading= item.name
+            ul.nav-card__links
+              for link in item.links
+                li.nav-card__link-item
+                  a(href="/" class="nav-card__link")= link
+                  +icon-mono("link")(width="24" height="24" class="nav-card__link-icon")
+
+
+section.section
+  .site-container
+    h2.service-provider__heading Все сервисные услуги педоставляются нашим сервисным подразделением ООО «Комплекс&nbsp;групп»
+    .service-provider.grid-container
+      .service-provider__image-wrapper
+        img(src="assets/images/service/img1.jpg" alt="Электрогазосварщик варит трубу")
+      .service-provider__col
+        .text-card
+          p
+            | Это 5 специалистов инжинирингового отдела, инженера-конструкторы, 16 специалистов для работы в производственно-ремонтном цеху и на выезде
+          ul
+            li слесари-ремонтники 5 разряда;
+            li токарь-фрезеровщик
+            li электрогазосварщики
+            li оператор и наладчик станка с ЧПУ.

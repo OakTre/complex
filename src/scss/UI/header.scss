@@ -1,6 +1,7 @@
 /* stylelint-disable selector-class-pattern */
 .header {
-  --header-default-color: var(--color-white);
+  --header-default-color: var(--color-text-minor);
+
   position: absolute;
   top: 0;
   left: 0;
@@ -9,6 +10,8 @@
   padding-top: var(--offset24);
   padding-bottom: var(--offset24);
   color: var(--header-default-color);
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-control-secondary);
 
   .site-container {
     display: flex;
@@ -25,6 +28,7 @@
   }
 
   &__logo {
+    display: none;
     flex-shrink: 0;
     max-width: 20.6rem;
 
@@ -43,7 +47,6 @@
     }
 
     @include mq(custom, max, 500) {
-      display: flex;
       flex-shrink: 0;
       align-items: center;
       justify-content: center;
@@ -53,7 +56,7 @@
     }
 
     &--secondary {
-      display: none !important;
+      display: flex !important;
     }
   }
 
@@ -148,15 +151,16 @@
   }
 
   &--white {
-    --header-default-color: var(--color-text-minor);
-    background-color: var(--color-white);
+    --header-default-color: var(--color-white);
+    background-color: transparent;
+    border-bottom: none;
 
     .header__logo {
-      display: none !important;
+      display: flex !important;
     }
 
     .header__logo--secondary {
-      display: flex !important;
+      display: none !important;
     }
   }
 }

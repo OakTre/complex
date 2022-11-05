@@ -1,7 +1,10 @@
 -
   nav_menu = [
-    "Инжиниринг и сервис", "Проектные решения",
-    "Поставка", "О нас", "Контакты"
+    { name: "Инжиниринг и сервис", link: "./service.html" },
+    { name: "Проектные решения", link: "./" },
+    { name: "Поставка", link: "./" },
+    { name: "О нас", link: "./" },
+    { name: "Контакты", link: "./" }
   ]
 
 .mobile-menu
@@ -11,4 +14,4 @@
     ul.mobile-menu__list
       for item in nav_menu
         li.mobile-menu__item
-          a(href="/")= item
+          a(href=item.link)= item.name

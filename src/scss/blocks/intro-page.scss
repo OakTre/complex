@@ -1,0 +1,34 @@
+.intro-page {
+  padding-top: 10rem;
+
+  @include mq(xl) {
+    padding-top: var(--offset80);
+  }
+
+  @include mq(lg) {
+    padding-top: var(--offset60);
+  }
+
+  @include mq(sm) {
+    padding-top: var(--offset40);
+  }
+
+  &__heading {
+    margin-bottom: var(--offset40);
+
+    @include mq(lg) {
+      margin-bottom: var(--offset32);
+    }
+  }
+
+  &__text {
+    max-width: 100rem;
+    font: var(--font-h5);
+    font-weight: 400;
+
+    @include mq(lg) {
+      max-width: 62rem;
+      font: var(--font-text-20-reg);
+    }
+  }
+}
