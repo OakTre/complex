@@ -12,13 +12,13 @@
     <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <title>Главная | ООО «Комплексное оснащение»</title>
+    <title>Инжиниринг и сервис | ООО «Комплексное оснащение»</title>
     <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.1.0">
   </head>
   <body class="page-home">
     <div class="page-wrapper">
 
-      <header class="header header--white">
+      <header class="header">
         <div class="site-container">
           <a class="header__logo" href="/">
             <img src="assets/images/logo-white.svg" alt="Логотип компании">
@@ -85,79 +85,89 @@
       </div>
 
       <main class="page-main main">
-        <section class="section intro" style="background-image:url(assets/images/intro-block/img.jpg);">
-          <div class="top-offset"></div>
+        <div class="top-offset"></div>
+        <section class="section intro-page">
           <div class="site-container">
-            <h1 class="visually-hidden">Комплексное оснащение</h1>
-            <div class="intro__inner">
-              <div class="intro__legend" data-legend="говорим">Оснащение</div>
-              <div class="intro__legend" data-legend="подразумеваем">Комплексное</div>
-              <div class="intro__content">
-                <p class="intro__text">Поставка оригинального оборудования, запасных частей и реинжиниринг для различных отраслей промышленности с последующим сервисным обслуживанием</p>
-                <div class="intro__links">
-                  <a href="mailto:order@compeq.ru">order@compeq.ru</a>
-                  <a href="tel:+78007075705">8 800 707-57-05</a>
-                  <a class="intro__link-sbis" href="/">Проверка на СБИС<svg class="icon icon-link" width="24" height="24">
-                      <use xlink:href="assets/images/sprites/sprite-mono.svg#link"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
+            <h1 class="site-second-heading intro-page__heading">Инжиниринг и сервис</h1>
+            <p class="intro-page__text">Мы не только поставляем, но и осуществляем сервисные и инжиниринговые услуги для промышленных и сельскохозяйственных предприятий</p>
           </div>
         </section>
         <section class="section">
-          <h2 class="visually-hidden">Наши услуги</h2>
           <div class="site-container">
-            <ul class="services__list grid-container">
-              <li class="services__item">
-                <article class="service-card">
-                  <div class="service-card__img-wrapper">
-                    <img src="assets/images/service-card/img1.jpg" alt="">
-                    <h3 class="service-card__heading">Поставка</h3>
-                  </div>
-                  <div class="service-card__body">
-                    <ul>
-                      <li>Поставка оборудования и запасных частей для промышленных предприятий;</li>
-                      <li>Подбор качественных аналогов;</li>
-                      <li>Техническое сопровождение на весь срок эксплуатации оборудования.</li>
-                    </ul>
-                    <a class="button button--small service-card__btn" href="/">Подробнее</a>
-                  </div>
+            <ul class="nav-cards grid-container">
+              <li class="nav-cards__item">
+                <article class="nav-card">
+                  <h3 class="nav-card__heading">Ремонт и обслуживание</h3>
+                  <ul class="nav-card__links">
+                    <li class="nav-card__link-item">
+                      <a class="nav-card__link" href="/">Производственных линий</a>
+                      <svg class="icon icon-link nav-card__link-icon" width="24" height="24">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#link"></use>
+                      </svg>
+                    </li>
+                    <li class="nav-card__link-item">
+                      <a class="nav-card__link" href="/">Промышленных насосов</a>
+                      <svg class="icon icon-link nav-card__link-icon" width="24" height="24">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#link"></use>
+                      </svg>
+                    </li>
+                    <li class="nav-card__link-item">
+                      <a class="nav-card__link" href="/">Редукторов и мотор-редукторов</a>
+                      <svg class="icon icon-link nav-card__link-icon" width="24" height="24">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#link"></use>
+                      </svg>
+                    </li>
+                    <li class="nav-card__link-item">
+                      <a class="nav-card__link" href="/">Прочего промышленного оборудования</a>
+                      <svg class="icon icon-link nav-card__link-icon" width="24" height="24">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#link"></use>
+                      </svg>
+                    </li>
+                  </ul>
                 </article>
               </li>
-              <li class="services__item">
-                <article class="service-card">
-                  <div class="service-card__img-wrapper">
-                    <img src="assets/images/service-card/img3.jpg" alt="">
-                    <h3 class="service-card__heading">Инжиниринг и сервис</h3>
-                  </div>
-                  <div class="service-card__body">
-                    <ul>
-                      <li>Ремонт оборудования;</li>
-                      <li>Разработка инженерной документации;</li>
-                      <li>Монтаж и пусконаладка;</li>
-                      <li>3D-моделирование.</li>
-                    </ul>
-                    <a class="button button--small service-card__btn" href="/">Подробнее</a>
-                  </div>
+              <li class="nav-cards__item">
+                <article class="nav-card">
+                  <h3 class="nav-card__heading">3D-моделирование и изготовление деталей</h3>
+                  <ul class="nav-card__links">
+                    <li class="nav-card__link-item">
+                      <a class="nav-card__link" href="/">Печать на 3D-принтере</a>
+                      <svg class="icon icon-link nav-card__link-icon" width="24" height="24">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#link"></use>
+                      </svg>
+                    </li>
+                    <li class="nav-card__link-item">
+                      <a class="nav-card__link" href="/">Пластиковые детали на станке ЧПУ</a>
+                      <svg class="icon icon-link nav-card__link-icon" width="24" height="24">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#link"></use>
+                      </svg>
+                    </li>
+                    <li class="nav-card__link-item">
+                      <a class="nav-card__link" href="/">Несерийные металлоконструкции</a>
+                      <svg class="icon icon-link nav-card__link-icon" width="24" height="24">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#link"></use>
+                      </svg>
+                    </li>
+                    <li class="nav-card__link-item">
+                      <a class="nav-card__link" href="/">Тефлорирование</a>
+                      <svg class="icon icon-link nav-card__link-icon" width="24" height="24">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#link"></use>
+                      </svg>
+                    </li>
+                  </ul>
                 </article>
               </li>
-              <li class="services__item">
-                <article class="service-card">
-                  <div class="service-card__img-wrapper">
-                    <img src="assets/images/service-card/img2.jpg" alt="">
-                    <h3 class="service-card__heading">Проектные решения</h3>
-                  </div>
-                  <div class="service-card__body">
-                    <ul>
-                      <li>Пароконденсатные системы;</li>
-                      <li>Оборудование для птицефабрик;</li>
-                      <li>Индустриальные редукторы и электродвигатели;</li>
-                      <li>Нестандартные задачи.</li>
-                    </ul>
-                    <a class="button button--small service-card__btn" href="/">Подробнее</a>
-                  </div>
+              <li class="nav-cards__item">
+                <article class="nav-card">
+                  <h3 class="nav-card__heading">Выездные работы</h3>
+                  <ul class="nav-card__links">
+                    <li class="nav-card__link-item">
+                      <a class="nav-card__link" href="/">Монтаж, ремонт, пусконаладка, ППР, аварийные выезды или аварийная</a>
+                      <svg class="icon icon-link nav-card__link-icon" width="24" height="24">
+                        <use xlink:href="assets/images/sprites/sprite-mono.svg#link"></use>
+                      </svg>
+                    </li>
+                  </ul>
                 </article>
               </li>
             </ul>
@@ -165,104 +175,22 @@
         </section>
         <section class="section">
           <div class="site-container">
-            <div class="partners">
-              <div class="partners__heading-wrapper">
-                <h2 class="site-second-heading">Наши партнеры — мировые лидеры</h2>
-                <a class="site-more-link" href="/"><span>Показать всех</span>
-                </a>
+            <h2 class="service-provider__heading">Все сервисные услуги педоставляются нашим сервисным подразделением ООО «Комплекс&nbsp;групп»</h2>
+            <div class="service-provider grid-container">
+              <div class="service-provider__image-wrapper">
+                <img src="assets/images/service/img1.jpg" alt="Электрогазосварщик варит трубу">
               </div>
-              <ul class="partners__list grid-container">
-                <li class="partners__item">
-                  <img src="assets/images/partners/img0.png" alt="">
-                </li>
-                <li class="partners__item">
-                  <img src="assets/images/partners/img1.png" alt="">
-                </li>
-                <li class="partners__item">
-                  <img src="assets/images/partners/img2.png" alt="">
-                </li>
-                <li class="partners__item">
-                  <img src="assets/images/partners/img3.png" alt="">
-                </li>
-                <li class="partners__item">
-                  <img src="assets/images/partners/img4.png" alt="">
-                </li>
-                <li class="partners__item">
-                  <img src="assets/images/partners/img5.png" alt="">
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section class="section">
-          <div class="site-container">
-            <div class="main-directions">
-              <h2 class="main-directions__heading site-second-heading">Основные направления</h2>
-            </div>
-            <div class="main-directions__container grid-container">
-              <div class="main-directions-card" style="background-image:url(assets/images/main-directions-card/img1.jpg);">
-                <a class="main-directions-card__link" href="/">Индустриальные редукторы и электродвигатели</a>
+              <div class="service-provider__col">
+                <div class="text-card">
+                  <p>Это 5 специалистов инжинирингового отдела, инженера-конструкторы, 16 специалистов для работы в производственно-ремонтном цеху и на выезде</p>
+                  <ul>
+                    <li>слесари-ремонтники 5 разряда;</li>
+                    <li>токарь-фрезеровщик</li>
+                    <li>электрогазосварщики</li>
+                    <li>оператор и наладчик станка с ЧПУ.</li>
+                  </ul>
+                </div>
               </div>
-              <div class="main-directions-card" style="background-image:url(assets/images/main-directions-card/img2.jpg);">
-                <a class="main-directions-card__link" href="/">Паровая арматура</a>
-              </div>
-              <div class="main-directions-card" style="background-image:url(assets/images/main-directions-card/img3.jpg);">
-                <a class="main-directions-card__link" href="/">Оборудование<br>для птицеводства</a>
-              </div>
-              <div class="main-directions-card" style="background-image:url(assets/images/main-directions-card/img4.jpg);">
-                <a class="main-directions-card__link" href="/">Промышленные датчики и взрывзащита</a>
-              </div>
-              <div class="main-directions-card" style="background-image:url(assets/images/main-directions-card/img5.jpg);">
-                <a class="main-directions-card__link" href="/">Промышленная химия</a>
-              </div>
-              <div class="main-directions-card" style="background-image:url(assets/images/main-directions-card/img6.jpg);">
-                <a class="main-directions-card__link" href="/">Конвеерная лента</a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section">
-          <div class="site-container">
-            <div class="whyus">
-              <h2 class="whyus__heading site-second-heading">Почему нам доверяют</h2>
-              <ul class="whyus__list grid-container">
-                <li class="whyus__item">
-                  <div class="whyus__img-wrapper">
-                    <img class="whyus__img" src="assets/images/whyus/img0.svg" alt="">
-                  </div>
-                  <p>Устойчивый рост на рынке на протяжении 8 лет</p>
-                </li>
-                <li class="whyus__item">
-                  <div class="whyus__img-wrapper">
-                    <img class="whyus__img" src="assets/images/whyus/img1.svg" alt="">
-                  </div>
-                  <p>Официальное дилерство. Гарантия конкурентной цены, защита проекта</p>
-                </li>
-                <li class="whyus__item">
-                  <div class="whyus__img-wrapper">
-                    <img class="whyus__img" src="assets/images/whyus/img2.svg" alt="">
-                  </div>
-                  <p>Безопасность и надёжность поставок (аудит поставщиков, таможенная очистка)</p>
-                </li>
-                <li class="whyus__item">
-                  <div class="whyus__img-wrapper">
-                    <img class="whyus__img" src="assets/images/whyus/img3.svg" alt="">
-                  </div>
-                  <p>Команда сервисного центра. Опыт&nbsp;работы более 10-ти лет</p>
-                </li>
-                <li class="whyus__item">
-                  <div class="whyus__img-wrapper">
-                    <img class="whyus__img" src="assets/images/whyus/img4.svg" alt="">
-                  </div>
-                  <p>Полный цикл сопровождения клиента от покупки до эксплуатации</p>
-                </li>
-                <li class="whyus__item">
-                  <div class="whyus__img-wrapper">
-                    <img class="whyus__img" src="assets/images/whyus/img5.svg" alt="">
-                  </div>
-                  <p>Гарантия на выполненные сервисные услуги до 1 года</p>
-                </li>
-              </ul>
             </div>
           </div>
         </section>
@@ -315,23 +243,6 @@
                   </article>
                 </li>
               </ul>
-            </div>
-          </div>
-        </section>
-        <section class="section">
-          <h2 class="visually-hidden">Цитата Генерального Директора</h2>
-          <div class="site-container">
-            <div class="quote">
-              <div class="avatar quote__avatar">
-                <img src="assets/images/avatar/logo.jpg" alt="Фотография генерального директора компании Айрата Фардеева">
-                <div class="avatar__heading">Айрат Фардеев</div>
-                <div class="avatar__text">Генеральный директор</div>
-              </div>
-              <div class="quote__text">
-                <p>Мы осуществляем поставки и сервис промышленных комплектующих/оборудования с 2014 года.</p>
-                <p>Наша компания за все эти годы из простой торгующей организации переросла в предприятие с полным циклом оказания услуг и укрепила нас в глазах наших клиентов, став для них надёжным партнёром.</p>
-                <p>Говоря Комплексное оснащение, в первую очередь я подразумеваю комплексные решения для наших партнёров. А это, помимо стабильного канала поставок, реализация нестандартных проектных решений с сопровождением качественного сервиса и инжиниринга, предлагаемые нашей компанией.</p>
-              </div>
             </div>
           </div>
         </section>
