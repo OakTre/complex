@@ -1,5 +1,8 @@
 .main-directions {
-  &__heading {
+  &__heading-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
     margin-bottom: var(--offset60);
 
     @include mq(lg) {

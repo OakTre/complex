@@ -11,8 +11,10 @@
 section.section
   .site-container
     .main-directions
-      h2.main-directions__heading.site-second-heading
-        | Основные направления
+      .main-directions__heading-wrapper
+        h2.main-directions__heading.site-second-heading
+          | Основные направления
+        a(href="/" class="site-more-link") #[span Каталог]
     .main-directions__container.grid-container
       for item in row1
         .main-directions-card(style={"background-image": `url(assets/images/main-directions-card/${item.icon}.jpg)`})

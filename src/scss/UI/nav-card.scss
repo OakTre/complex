@@ -15,140 +15,20 @@
     border-radius: var(--offset12);
   }
 
-  &__icon {
-    position: relative;
+  &__img {
     width: 8rem;
     height: 8rem;
     margin-bottom: var(--offset40);
+    object-fit: contain;
 
     @include mq(lg) {
+      width: 6rem;
+      height: 6rem;
       margin-bottom: var(--offset32);
     }
 
     @include mq(sm) {
       margin-bottom: var(--offset24);
-    }
-
-    &.icon-one {
-      --icon-width: 4.6rem;
-
-      .circle {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        display: block;
-        width: var(--icon-width);
-        height: var(--icon-width);
-        transform: translate(-50%, -50%);
-      }
-
-      .half-circle {
-        position: absolute;
-        top: 50%;
-        width: var(--icon-width);
-        height: var(--icon-width);
-        transform: translateY(-50%);
-        transition: all var(--transition);
-      }
-
-      .half-circle1 {
-        left: -1rem;
-        transform: translateY(-50%) scale(-1, 1);
-      }
-
-      .half-circle2 {
-        right: -1rem;
-        transform: translateY(-50%) scale(1, -1);
-      }
-    }
-
-    &.icon-two {
-      --icon-width: 6.2rem;
-
-      .block {
-        position: absolute;
-        bottom: 1.2rem;
-        left: 50%;
-        width: var(--icon-width);
-        transform: translateX(-50%);
-        transition: all var(--transition);
-      }
-
-      .half-circle {
-        position: absolute;
-        top: 1.2rem;
-        left: 50%;
-        width: var(--icon-width);
-        transform: translateX(-50%);
-        transition: all var(--transition);
-      }
-    }
-
-    &.icon-three {
-      .circle {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        z-index: 1;
-        width: 4rem;
-        height: 4rem;
-        transform: translateX(-50%);
-        transition: all var(--transition);
-      }
-
-      .triangle {
-        position: absolute;
-        bottom: 1rem;
-        left: 50%;
-        width: 5rem;
-        height: 5rem;
-        transform: translateX(-50%);
-        transition: all var(--transition);
-      }
-    }
-  }
-
-  &--icon-one {
-    &:hover {
-      .half-circle1 {
-        left: 0.6rem;
-        transform: translateY(-50%) scale(-1, 1) rotate(180deg);
-      }
-
-      .half-circle2 {
-        right: 0.6rem;
-        transform: translateY(-50%) scale(1, -1) rotate(180deg);
-      }
-    }
-  }
-
-  &--icon-two {
-    &:hover {
-      .block {
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      .half-circle {
-        top: 50%;
-        bottom: auto;
-        transform: translate(-50%, -50%);
-      }
-    }
-  }
-
-  &--icon-three {
-    &:hover {
-      .circle {
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      .triangle {
-        top: 50%;
-        bottom: auto;
-        transform: translate(-50%, -50%);
-      }
     }
   }
 

@@ -8,4 +8,5 @@ section.section
       ul.partners__list.grid-container
         each i in Array.from(Array(6).keys())
           li.partners__item
-            img(src=`assets/images/partners/img${i}.png` alt="")
+            a(href="/")
+              img(src=`assets/images/partners/img${i}.png` alt="")
