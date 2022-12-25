@@ -5,6 +5,7 @@ import documenReady from './helpers/documenReady';
 import initModal from './modules/initModal';
 import validation from './modules/validation';
 import openMenu from './modules/openMenu';
+import contacts from './modules/contacts';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -13,4 +14,5 @@ documenReady(() => {
   initModal();
   validation();
   openMenu();
+  contacts();
 });

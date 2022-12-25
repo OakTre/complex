@@ -1,0 +1,254 @@
+/* stylelint-disable selector-class-pattern */
+.contacts {
+  &__heading-row {
+    display: flex;
+    align-items: center;
+    margin-top: 10rem;
+    margin-bottom: 8rem;
+
+    @include mq(xl) {
+      flex-wrap: wrap;
+      margin-top: 4rem;
+    }
+
+    @include mq(md) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq(sm) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+
+    @include mq(xl) {
+      order: 12;
+      width: 100%;
+      margin-top: 2.4rem;
+    }
+
+    @include mq(md) {
+      margin-top: 1.6rem;
+    }
+
+    @include mq(sm) {
+      gap: 0.8rem;
+    }
+
+    @include mq(custom, max, 360) {
+      flex-direction: column;
+    }
+  }
+
+  &__heading {
+    margin-right: 9rem;
+    font: var(--font-h2);
+
+    @include mq(sm) {
+      margin: 0;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__city {
+    margin-left: auto;
+    color: var(--color-text-secondary);
+    font: var(--font-h6);
+
+    &::before {
+      display: block;
+      margin-bottom: 0.8rem;
+      color: var(--color-bg-secondary);
+      font: var(--font-text-20-reg);
+      text-align: right;
+      content: attr(data-text);
+    }
+
+    @include mq(xl) {
+      font: var(--font-text-20-md);
+    }
+
+    @include mq(sm) {
+      margin-left: 0;
+
+      &::before {
+        margin-bottom: 0;
+        text-align: left;
+      }
+    }
+  }
+
+  &__btn {
+    margin-right: 2.4rem;
+    pointer-events: none;
+
+    &.button--secondary {
+      pointer-events: all;
+    }
+
+    &-icon {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+      color: currentcolor;
+    }
+
+    span {
+      display: inline-flex;
+      align-items: center;
+
+      &::before {
+        display: block;
+        flex-shrink: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 1rem;
+        background-image: url("../images/pin.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        content: "";
+      }
+
+      @include mq(md) {
+        &::before {
+          width: 2rem;
+          height: 2rem;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    @include mq(md) {
+      padding: 1rem 3.2rem;
+    }
+
+    @include mq(sm) {
+      justify-content: center;
+      width: 50%;
+      margin: 0;
+    }
+
+    @include mq(custom, max, 360) {
+      width: 100%;
+    }
+
+    &--menu {
+      span {
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    &--outline {
+      border: 1px solid var(--color-btn-primary);
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 67rem;
+    background-color: var(--color-text-secondary);
+
+    @include mq(xl) {
+      height: 47rem;
+    }
+
+    @include mq(sm) {
+      height: 39rem;
+    }
+  }
+
+  &__content {
+    &-item {
+      display: none;
+
+      &.is-active {
+        display: block;
+      }
+    }
+  }
+
+  &__table {
+    width: 100%;
+    padding-top: 2.6rem;
+    border-top: 1px solid #d9d9d9;
+
+    &-row {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: var(--grid-offset);
+      padding: 1.4rem 2rem;
+
+      @include mq(md) {
+        grid-template-columns: repeat(4, 1fr);
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      @include mq(sm) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.6rem 0;
+      }
+    }
+
+    &-row-head {
+      font: var(--font-text-20-md);
+      background-color: var(--color-bg-minor-grey);
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+
+    &-cell {
+      grid-column: 2 span;
+
+      &:nth-child(1) {
+        grid-column: 4 span;
+      }
+
+      @include mq(md) {
+        grid-column: 2 span !important;
+
+        &:empty {
+          display: none;
+        }
+
+        &::before {
+          display: block;
+          margin-bottom: 0.8rem;
+          color: var(--color-text-secondary);
+          font: var(--font-text-14-md);
+          content: attr(data-mobile-heaidng);
+
+          @include mq(sm) {
+            margin-bottom: 0.2rem;
+          }
+        }
+      }
+    }
+
+    &-btn {
+      margin-top: 0.4rem;
+      font: var(--font-text-14-md);
+    }
+
+    @include mq(md) {
+      padding-top: 0;
+      padding-bottom: 2rem;
+      border-top: none;
+      border-bottom: 1px solid #d9d9d9;
+
+      &:last-child {
+        padding-bottom: 0;
+        border: none;
+      }
+    }
+  }
+}
