@@ -21,7 +21,7 @@ export default () => {
 
   function init() {
     let zoom = 16;
-    let center = mapCoords[0].split(',');
+    let center = mapCoords[0].coords.split(',');
 
     contactsMap = new ymaps.Map(
       map, {
@@ -41,12 +41,14 @@ export default () => {
     // contactsMap.behaviors.disable('drag');
 
     // проходимся по бз и подставляем иконки на карту
-    mapCoords.forEach((coord) => {
-      const marker = new ymaps.Placemark(coord.split(','), {}, {
+    mapCoords.forEach(({coords, adress}) => {
+      const marker = new ymaps.Placemark(coords.split(','), {
+        balloonContent: adress
+      }, {
         iconLayout: 'default#image',
         iconImageHref: mapMarker,
         iconImageSize: [58, 58],
-        iconImageOffset: [-29, -29]
+        iconImageOffset: [-29, -29],
       });
 
       contactsMap.geoObjects.add(marker);
@@ -79,8 +81,12 @@ export default () => {
 
   mapBtns.forEach(btn => {
     const mapcoord = btn.dataset.coords;
+    const adrs = btn.dataset.adres;
 
-    mapCoords.push(mapcoord);
+    mapCoords.push({
+      coords: mapcoord,
+      adress: adrs
+    });
 
     btn.addEventListener("click", () => {
       const mapCenter = btn.dataset.coords;

@@ -1,0 +1,110 @@
+.top-offset
+section.history-intro.section
+  .site-container.history-intro__grid-container
+    .history-intro__block
+      h2.site-second-heading
+        | О компании
+      ul.history-intro__list
+        li.history-intro__item
+          a(href="/" class="intro__link-sbis")
+            | Проверка на СБИС
+            +icon-mono("link")(width="24" height="24")
+
+        li.history-intro__item
+          a(href="/" class="intro__link-sbis")
+            | Новости
+            +icon-mono("link")(width="24" height="24")
+
+        li.history-intro__item
+          a(href="/" class="intro__link-sbis")
+            | Партнеры
+            +icon-mono("link")(width="24" height="24")
+
+        li.history-intro__item
+          a(href="/" class="intro__link-sbis")
+            | Реализованные проекты
+            +icon-mono("link")(width="24" height="24")
+
+        li.history-intro__item.history-intro__item--last
+          a(href="/" class="intro__link-sbis")
+            | Проверка на СБИС
+            +icon-mono("link")(width="24" height="24")
+
+    .history-intro__block
+      h2.site-second-heading.history-intro__heading
+        | О компании
+      p.history-intro__text
+        | ООО «Комплексное оснащение» - многопрофильная организация, охватывающая все аспекты проектирования, инжиниринга, поставок оригинального оборудования и запасных частей и сервиса. Имея подразделения в Ульяновске, Казани, Новосибирске  и Екатеринбурге, мы можем применять наши знания и опыт в широком спектре проектов по всей России.
+
+      .history-intro__image
+        img(src="assets/images/company.jpg" class="history-intro__img" alt="")
+
+      ul.history-intro__list.history-intro__list--mobile
+        li.history-intro__item
+          a(href="/" class="intro__link-sbis")
+            | Проверка на СБИС
+            +icon-mono("link")(width="24" height="24")
+
+        li.history-intro__item
+          a(href="/" class="intro__link-sbis")
+            | Новости
+            +icon-mono("link")(width="24" height="24")
+
+        li.history-intro__item
+          a(href="/" class="intro__link-sbis")
+            | Партнеры
+            +icon-mono("link")(width="24" height="24")
+
+        li.history-intro__item
+          a(href="/" class="intro__link-sbis")
+            | Реализованные проекты
+            +icon-mono("link")(width="24" height="24")
+
+        li.history-intro__item.history-intro__item--mobile.history-intro__item--last
+          a(href="/" class="intro__link-sbis")
+            | Проверка на СБИС
+            +icon-mono("link")(width="24" height="24")
+-
+  history_text = [
+    { name: "2014 год", text: "Запуск компании" },
+    { name: "2018 год", text: "Открытие офиса и логистического склада в Словакии" },
+    { name: "2020 год", text: "Открытие сервисного центра" },
+    { name: "2021 год", text: "Трансформация инжинирингового отдела" },
+    { name: "2022 год", text: "Открытие  офисов: Ульяновск, Екатеринбург, Новосибирск, Казань, Братислава" },
+  ]
+
+section.section
+  .site-container
+    .history
+      h2.history__heading.site-second-heading
+        | История развития
+      p.history__text
+        | Вектор развития: поставка оригинального оборудования с максимальным охватом потребностей клиентов
+    .history__row
+      for item in history_text
+        .history__item
+          .history__item-name= item.name
+          .history__item-text= item.text
+
+
+-
+  whyus_list = [
+    { name: "Устойчивый рост на рынке на протяжении 8 лет", icon: "img0" },
+    { name: "Официальное дилерство. Гарантия конкурентной цены, защита проекта", icon: "img1" },
+    { name: "Безопасность и надёжность поставок (аудит поставщиков, таможенная очистка)", icon: "img2" },
+    { name: "Команда сервисного центра. Опыт&nbsp;работы более 10-ти лет", icon: "img3" },
+    { name: "Полный цикл сопровождения клиента от покупки до эксплуатации", icon: "img4" },
+    { name: "Гарантия на выполненные сервисные услуги до 1 года", icon: "img5" }
+  ]
+
+section.section
+  .site-container
+    .whyus
+      h2.whyus__heading.site-second-heading
+        | Почему нам доверяют
+      ul.whyus__list.grid-container
+        for item in whyus_list
+          li.whyus__item
+            .whyus__img-wrapper
+              img(src=`assets/images/whyus/${item.icon}.svg` class="whyus__img" alt="")
+            p!= item.name
